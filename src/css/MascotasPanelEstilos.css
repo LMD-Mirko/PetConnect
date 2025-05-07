@@ -1,0 +1,84 @@
+.mascotas-panel-container {
+
+  background-color: #f8f9fa;
+  /* Un fondo muy claro para suavizar */
+}
+
+.mascotas-panel-content {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.mascotas-panel-content h1 {
+  color: #37474f;
+  margin-bottom: 0px;
+  text-align: left;
+  font-size: 2.9em;
+  letter-spacing: -0.5px;
+  font-weight: bold;
+}
+
+.mascotas-panel-content .panel-description {
+  color: #000000;
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.mascotas-panel-content .panel-description {
+  color: #5499c7;
+  margin-bottom: 60px;
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.mascotas-grid-nuevo {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(298px, 1fr));
+  margin-top: 40px;
+
+}
+
+.pet-info {
+  padding: 20px;
+}
+
+.pet-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+.pet-info p.pet-breed,
+.pet-info p.pet-location {
+  font-size: 0.85em;
+  margin-bottom: 3px;
+}
+
+.pet-vaccines {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.pet-vaccines-title {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.pet-vaccines-list {
+  list-style: disc;
+  padding-left: 15px;
+  font-size: 0.8em;
+}

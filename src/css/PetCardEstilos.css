@@ -1,0 +1,79 @@
+.pet-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.pet-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pet-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.pet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.pet-image-placeholder {
+  background-color: #f0f0f0;
+  color: #bbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2em;
+}
+
+.pet-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pet-name {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.pet-breed {
+  color: #666;
+  font-size: 1em;
+}
+
+.pet-location {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.pet-details-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 0 12px 12px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease-in-out;
+  text-align: center;
+}
+
+.pet-details-button:hover {
+  background-color: #0056b3;
+}

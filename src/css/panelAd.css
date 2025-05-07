@@ -1,0 +1,142 @@
+/* Estilos para la sección de la tabla */
+#table-container {
+  flex: 1;
+  padding: 50px;
+}
+
+.titulo-mascotas {
+  font-size: 28px;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000 !important;
+}
+
+#add-mascota-button {
+  background-color: #ff9800;
+  color: rgb(0, 0, 0);
+  border-color: #000;
+  border-radius: 100px;
+  padding: 10px 20px;
+  margin: 15px;
+  margin-bottom: 30px;
+  margin-left: -900px;
+  cursor: pointer;
+}
+
+#add-mascota-button:hover {
+  background-color: #e68a00;
+}
+
+#table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#mascotas-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#mascotas-table th,
+#mascotas-table td {
+  border: 10px solid #ffffff;
+  padding: 10px;
+  font-weight: 900 !important;
+  text-align: left;
+}
+
+#mascotas-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+#mascotas-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Ajustar el ancho de las celdas de la tabla */
+#mascotas-table th:nth-child(3),
+#mascotas-table td:nth-child(4) {
+  width: 250px;
+}
+
+/* Estilos para los botones de acción */
+.action-buttons {
+  position: relative;
+  display: inline-block;
+}
+
+.edit-button {
+  background-color: #4caf50 !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  cursor: pointer;
+  border-radius: 20px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+}
+
+.edit-button:hover {
+  background-color: #45a049 !important;
+}
+
+.delete-button {
+  background-color: #f44336 !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  cursor: pointer;
+  border-radius: 20px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  position: absolute;
+  left: 50px;
+  /* Ajusta esta distancia según sea necesario */
+}
+
+.delete-button:hover {
+  background-color: #d32f2f !important;
+}
+
+.ant-table-blue-header .ant-table-thead > tr > th {
+  background: #1677ff !important;
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 2px solid #1677ff;
+}
+
+.ant-table-row-custom {
+  font-size: 15px;
+}
+
+.ant-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #e6f0ff;
+}
+
+.ant-table .ant-btn-primary {
+  background: #1677ff;
+  border-color: #1677ff;
+}
+
+.ant-table .ant-btn-primary:hover {
+  background: #0958d9;
+  border-color: #0958d9;
+}
+
+.ant-table .ant-btn-dangerous {
+  background: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.ant-table .ant-btn-dangerous:hover {
+  background: #d9363e;
+  border-color: #d9363e;
+}
+
+/* Asegura que las notificaciones estén siempre por encima */
+.ant-notification {
+  z-index: 9999 !important;
+}

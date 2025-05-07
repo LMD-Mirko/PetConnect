@@ -1,0 +1,64 @@
+/* Estilos para el modal de edición de mascotas */
+.edit-pet-modal {
+    width: 100%;
+    max-width: 1500px;
+  }
+  
+  .edit-pet-modal .MuiDialogTitle-root {
+    background-color: #007bff;
+    color: white;
+    padding: 16px;
+  }
+  
+  .edit-pet-modal .MuiDialogContent-root {
+    padding: 24px;
+  }
+  
+  .edit-pet-modal .MuiTextField-root {
+    margin-bottom: 16px;
+  }
+  
+  .edit-pet-modal .MuiDialogActions-root {
+    padding: 16px;
+    justify-content: flex-end;
+  }
+  
+  .edit-pet-modal .MuiButton-root {
+    margin-left: 8px;
+  }
+  
+  .edit-pet-modal .MuiButton-containedPrimary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .edit-pet-modal .MuiButton-containedPrimary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Centrado completo del modal */
+.edit-pet-modal .MuiDialog-paper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.required {
+  color: red;
+  margin-left: 2px;
+}
+
+.modal-field-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.modal-field {
+  margin-bottom: 16px;
+}
