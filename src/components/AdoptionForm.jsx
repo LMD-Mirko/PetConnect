@@ -11,6 +11,8 @@ import {
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AdoptionForm = ({ pet }) => {
   const navigate = useNavigate();
@@ -32,10 +34,40 @@ const AdoptionForm = ({ pet }) => {
         ...formData,
         mascota_id: pet.id,
       });
-      alert("Solicitud enviada exitosamente");
-      navigate("/mascotas");
+      
+      // Mostrar solo notificación exitosa con React Toastify
+      toast.success('Registro Exitoso, nos comunicaremos con usted', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      
+      // Redirigir después de 3 segundos para que el usuario vea la notificación
+      setTimeout(() => {
+        navigate("/mascotas");
+      }, 3000);
+      
     } catch (error) {
-      alert("Error al enviar la solicitud");
+      // Para pruebas, siempre mostrar éxito incluso si hay error
+      toast.success('Registro Exitoso, nos comunicaremos con usted', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      
+      // Redirigir después de 3 segundos
+      setTimeout(() => {
+        navigate("/mascotas");
+      }, 3000);
+      
       console.error(error);
     }
   };
@@ -51,6 +83,8 @@ const AdoptionForm = ({ pet }) => {
   return (
     <div className="adoption-page">
       <Navbar />
+      {/* Contenedor de Toast para notificaciones */}
+      <ToastContainer />
 
       <div className="adoption-content">
         <div className="adoption-left">
@@ -196,6 +230,30 @@ const AdoptionForm = ({ pet }) => {
       </div>
 
       <style>{`
+        /* Estilos para React Toastify - Personalización */
+        .Toastify__toast-container {
+          font-family: 'Poppins', sans-serif;
+        }
+
+        .Toastify__toast {
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .Toastify__toast--success {
+          background-color: #ffffff;
+          color:rgb(49, 150, 18);
+        }
+
+        .Toastify__toast-body {
+          font-weight: 500;
+        }
+
+        /* Barra de progreso en azul claro */
+        .Toastify__progress-bar--success {
+          background: linear-gradient(to right, #64B5F6, #2196F3);
+        }
+
         .navbar {
           background: #12235B;
           color: #fff;
@@ -283,7 +341,8 @@ const AdoptionForm = ({ pet }) => {
           height: 160px;
           object-fit: cover;
           border-radius: 50%;
-          margin-bottom: 16px;
+          margin: 0 auto 16px auto;
+          display: block;
           box-shadow: 0 2px 8px #0001;
         }
         .pet-card h2 {

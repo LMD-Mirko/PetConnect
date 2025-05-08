@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../pages/petbot"
 
 const PetInfoModal = ({ visible, onClose, mascota }) => {
   const navigate = useNavigate();
@@ -115,6 +116,7 @@ const PetInfoModal = ({ visible, onClose, mascota }) => {
               <button
                 className="petinfo-ia-btn"
                 title="IA: Consejos personalizados"
+                onClick={() => navigate('/petbot')} // Redirige a la ruta del Pet Bot
               >
                 <span
                   role="img"
